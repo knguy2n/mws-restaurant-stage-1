@@ -111,17 +111,26 @@ nav h1 a {
     color: #01447e;
     text-decoration: underline;
 }
+
+
+
+
 /* ====================== Map ====================== */
 #map {
   height: 400px;
   width: 100%;
   background-color: #ccc;
 }
+
+.leaflet-container a {
+    color: #015577;
+}
+
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
   width: 100%;
   height: 75%;
-  background-color: #3397DB;
+  background-color: #045788;
   align-items: center;
 }
 .filter-options h2 {
@@ -310,6 +319,9 @@ nav h1 a {
   color: #666;
 }
 
+strong{
+  color:white;
+}
 
 @media screen and (min-width: 800px) {
       body {

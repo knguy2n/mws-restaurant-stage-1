@@ -82,9 +82,9 @@ initMap = () => {
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
     mapboxToken: 'pk.eyJ1Ijoia2RuNTA4IiwiYSI6ImNqbGZ3ZGdwODExNnAzcG85a25laGJscGUifQ.QPthNxNyDhshA9mBOvgX6Q',
     maxZoom: 18,
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
-      '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-      'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    attribution: 'Map data &copy; <a class= "maplinks" href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+      '<a class= "maplinks href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+      'Imagery © <a class= "maplinks href="https://www.mapbox.com/">Mapbox</a>',
     id: 'mapbox.streets'
   }).addTo(newMap);
 
@@ -183,6 +183,7 @@ createRestaurantHTML = (restaurant) => {
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
+  more.tabIndex = "3";
   li.append(more)
 
   return li
@@ -198,11 +199,10 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     marker.on("click", onClick);
     function onClick() {
       window.location.href = marker.options.url;
-      m
+      
     }
     self.markers.push(marker);
-    document.querySelector('#map').tabIndex = '-1';
-    document.getElementsByClassName('leaflet-marker-icon leaflet-zoom-animated leaflet-interactive').tabIndex ='1';
+    
   });
 
 } 
