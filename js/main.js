@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   initMap(); // added 
   fetchNeighborhoods();
   fetchCuisines();
+
 });
 
 /**
@@ -35,6 +36,7 @@ fillNeighborhoodsHTML = (neighborhoods = self.neighborhoods) => {
   neighborhoods.forEach(neighborhood => {
     const option = document.createElement('option');
     option.innerHTML = neighborhood;
+    option.setAttribute('aria-label', "neighborhood");
     option.value = neighborhood;
     select.append(option);
   });
@@ -87,6 +89,7 @@ initMap = () => {
   }).addTo(newMap);
 
   updateRestaurants();
+  document.querySelector('#map').tabIndex = '-1';
 }
 /* window.initMap = () => {
   let loc = {
@@ -150,17 +153,19 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
     ul.append(createRestaurantHTML(restaurant));
   });
   addMarkersToMap();
+
 }
 
 /**
  * Create restaurant HTML.
  */
 createRestaurantHTML = (restaurant) => {
-  const li = document.createElement('li');
+  const li = document.createElement('button');
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  image.alt = 'image of restaurant'
   li.append(image);
 
   const name = document.createElement('h1');
@@ -193,8 +198,11 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     marker.on("click", onClick);
     function onClick() {
       window.location.href = marker.options.url;
+      m
     }
     self.markers.push(marker);
+    document.querySelector('#map').tabIndex = '-1';
+    document.getElementsByClassName('leaflet-marker-icon leaflet-zoom-animated leaflet-interactive').tabIndex ='1';
   });
 
 } 

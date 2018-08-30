@@ -29,7 +29,7 @@ ul, li {
 	color: #333;
 }
 a {
-	color: orange;
+	color: ##bddaf1;
 	text-decoration: none;
 }
 a:hover, a:focus {
@@ -52,7 +52,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 }
 #footer {
   background-color: #444;
-  color: #aaa;
+  color: #fdfdfd;
   font-size: 8pt;
   letter-spacing: 1px;
   padding: 25px;
@@ -173,8 +173,8 @@ nav h1 a {
   min-height: 248px;
   min-width: 100%;
 }
-#restaurants-list li h1 {
-  color: #f18200;
+#restaurants-list h1 {
+  color: #045788;
   font-family: Arial,sans-serif;
   font-size: 14pt;
   font-weight: 200;
@@ -187,8 +187,8 @@ nav h1 a {
   margin: 0;
   font-size: 11pt;
 }
-#restaurants-list li a {
-  background-color: orange;
+#restaurants-list button a {
+  background-color: #045788;
   border-bottom: 3px solid #eee;
   color: #fff;
   display: inline-block;
