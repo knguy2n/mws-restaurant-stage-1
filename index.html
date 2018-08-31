@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en-US">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,23 +11,24 @@
 </head>
 
 <body>
+  <a href="#filter" class="skip-link">Skip to filters</a>
   <header>
     <nav>
-      <h1><a aria-label='Home' tabindex="1" href="/">Restaurant Reviews</a></h1>
+      <h1><a tabindex="0" aria-label='Home' href="/">Restaurant Reviews</a></h1>
     </nav>
   </header>
 
   <main id="maincontent">
-    <section id="map-container">
-      <div title="Map of restaurant locations" tabindex="-1" id="map"></div>
+    <section id="map-container" tabindex="-1">
+      <div title="Map of restaurant locations"  id="map" tabindex="-1"></div>
     </section>
     <section>
-      <div class="filter-options">
+      <div class="filter-options" id="filter"  >
         <h2>Filter Results</h2>
-          <select aria-label ="Select Neighborhood" aria-haspopup="true" role="menuitem" tabindex="2" id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">       
+          <select aria-label ="Select Neighborhood" aria-haspopup="true" role="listbox" tabindex="0" id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">       
           <option value="all">All Neighborhoods</option>
         </select>
-        <select aria-label="Select cuisines" aria-haspopup="true" role="menuitem" tabindex="2" id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
+        <select aria-label="Select cuisines" aria-haspopup="true" role="listbox" tabindex="0" id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
           <option value="all">All Cuisines</option>
         </select>
       </div>
