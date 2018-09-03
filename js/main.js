@@ -9,9 +9,9 @@ var markers = []
 
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker
-  .register('sw/sw.js')
+  .register('/sw.js')
   .catch(function(err) {
-    console.error(err);
+    console.log('error');
   });
 }
 
