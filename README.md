@@ -3,6 +3,11 @@
 
 ## Project Overview: Stage 1
 
+#How to run project
+1. download or clone project from https://github.com/knguy2n/mws-restaurant-stage-1
+2. Open terminal & cd into project folder
+3. Run python -m SimpleHTTPServer 8000
+4. Open web browser to localhost:8000 to see project!
 
 # Tasks Completed
 
